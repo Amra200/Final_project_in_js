@@ -1,0 +1,331 @@
+body {
+  transition: background-color 0.5s, color 0.5s;
+  background-color: #f0ecff;
+  margin: 0px;
+}
+.form-control {
+  transition: background-color 0.5s, color 0.5s;
+}
+body.night-mode,
+.night-mode .form-control {
+  background-color: #212121;
+  color: white;
+}
+.card,
+.form {
+  transition: background-color 0.5s, color 0.5s;
+}
+.night-mode .card,
+.night-mode .comment,
+.night-mode #form {
+  background-color: #161616 !important;
+  color: white !important;
+}
+nav.night-mode {
+  background-color: #161616;
+}
+
+.night-mode .nav-link,
+.night-mode #posts-count,
+.night-mode #comments-count {
+  color: white !important;
+}
+.darkModeBtn {
+  cursor: pointer;
+}
+
+.lightModeBtn {
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+}
+#navbarNav ul li .nav-link.night-mode {
+  color: white;
+}
+.btn-container {
+  display: flex;
+  vertical-align: middle;
+  text-align: end;
+  width: fit-content;
+  margin: 10px auto;
+}
+
+.btn-container i {
+  display: inline-block;
+  position: relative;
+  top: -9px;
+}
+
+button {
+  font-size: 13px;
+  color: #424242;
+  font-weight: 500;
+  display: inline-block;
+  margin: 0px;
+  position: relative;
+}
+
+.card {
+  margin-top: 20px;
+}
+@media (max-width: 767px) {
+  .card .row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card .card-img {
+    width: 100%;
+  }
+  .card .card-info {
+    width: 100%;
+    margin: 10px auto;
+    text-align: center;
+  }
+  .card .card-count {
+    width: 100%;
+    text-align: center;
+  }
+}
+.blur {
+  filter: blur(7px);
+}
+.popup-menu {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%) scale(0.1);
+  font-family: sans-serif;
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+}
+@media (max-width: 767px) {
+  .popup-menu {
+    width: 80%;
+  }
+}
+.open-popup {
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}
+.popup-menu .popup {
+  background-color: #fff;
+  text-align: center;
+  padding: 0 30px 30px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.popup-menu .popup img {
+  width: 130px;
+  margin-top: -40px;
+  border-radius: 50%;
+}
+.popup h2 {
+  font-size: 38px;
+  font-weight: 500;
+  margin: 15px 0px 10px;
+}
+.popup p {
+  font-size: 20px;
+}
+.popup button {
+  width: 95%;
+  margin-top: 50px;
+  padding: 10px 0px;
+  background-color: #6fd649;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+  border-radius: 4px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.auth-system {
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 60px auto;
+  height: 100vh;
+}
+
+.auth-system .register {
+  width: 100%;
+  margin-left: 20px;
+}
+.auth-system .form {
+  background-color: white;
+  margin-top: -100px;
+
+  padding: 0px 40px 20px;
+  width: 30%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 500px) {
+  .auth-system .form {
+    width: 90%;
+  }
+}
+@media (min-width: 500px) {
+  .auth-system .form {
+    width: 65%;
+  }
+}
+@media (min-width: 900px) {
+  .auth-system .form {
+    width: 50%;
+  }
+}
+.auth-system .form h1 {
+  text-align: center;
+  margin: 50px 0px 26px;
+  color: #78909c;
+}
+
+.flex {
+  display: flex;
+}
+
+.auth-system .form form .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.auth-system form a {
+  text-align: right;
+}
+#post-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  color: white;
+  font-size: 35px;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0px 18px 4px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+.number-info {
+  color: rgb(172, 172, 172);
+  font-weight: 100;
+}
+.number-info span {
+  color: black;
+  font-size: 50px;
+}
+.user-main-info {
+  font-size: 20px;
+}
+/* ====================loader styel=================== */
+.dot-spinner {
+  --uib-size: 2.8rem;
+  --uib-speed: 0.9s;
+  --uib-color: white;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: var(--uib-size);
+  width: var(--uib-size);
+}
+
+.dot-spinner__dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
+}
+
+.dot-spinner__dot::before {
+  content: "";
+  height: 20%;
+  width: 20%;
+  border-radius: 50%;
+  background-color: var(--uib-color);
+  transform: scale(0);
+  opacity: 0.5;
+  animation: pulse0112 calc(var(--uib-speed) * 1.111) ease-in-out infinite;
+  box-shadow: 0 0 20px rgba(18, 31, 53, 0.3);
+}
+
+.dot-spinner__dot:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.dot-spinner__dot:nth-child(2)::before {
+  animation-delay: calc(var(--uib-speed) * -0.875);
+}
+
+.dot-spinner__dot:nth-child(3) {
+  transform: rotate(90deg);
+}
+
+.dot-spinner__dot:nth-child(3)::before {
+  animation-delay: calc(var(--uib-speed) * -0.75);
+}
+
+.dot-spinner__dot:nth-child(4) {
+  transform: rotate(135deg);
+}
+
+.dot-spinner__dot:nth-child(4)::before {
+  animation-delay: calc(var(--uib-speed) * -0.625);
+}
+
+.dot-spinner__dot:nth-child(5) {
+  transform: rotate(180deg);
+}
+
+.dot-spinner__dot:nth-child(5)::before {
+  animation-delay: calc(var(--uib-speed) * -0.5);
+}
+
+.dot-spinner__dot:nth-child(6) {
+  transform: rotate(225deg);
+}
+
+.dot-spinner__dot:nth-child(6)::before {
+  animation-delay: calc(var(--uib-speed) * -0.375);
+}
+
+.dot-spinner__dot:nth-child(7) {
+  transform: rotate(270deg);
+}
+
+.dot-spinner__dot:nth-child(7)::before {
+  animation-delay: calc(var(--uib-speed) * -0.25);
+}
+
+.dot-spinner__dot:nth-child(8) {
+  transform: rotate(315deg);
+}
+
+.dot-spinner__dot:nth-child(8)::before {
+  animation-delay: calc(var(--uib-speed) * -0.125);
+}
+
+@keyframes pulse0112 {
+  0%,
+  100% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ========================//loader styel//============================ */
