@@ -511,56 +511,11 @@ function createCommentClicked() {
     });
 }
 // comment function=====================///////
-// post.html========================//////////
-// darkmode=========================
-// const isNightMode = localStorage.getItem("nightMode") === "true";
-// if (isNightMode) {
-//   enableNightMode();
-// } else {
-//   disableNightMode();
-// }
-// let isCliked = false;
-// darkMode.addEventListener("click", function () {
-//   if (isCliked) {
-//     enableNightMode();
-//   } else {
-//     disableNightMode();
-//   }
-//   isCliked = !isCliked;
-// });
-
-// function enableNightMode() {
-//   darkMode.style.color = "white";
-//   body.classList.add("night-mode");
-//   nav.classList.add("night-mode");
-//   cards.forEach((card) => {
-//     card.classList.add("night-mode");
-//   });
-//   navlinks.forEach((navlink) => {
-//     navlink.classList.add("night-mode");
-//   });
-//   form.classList.add("night-mode");
-//   localStorage.setItem("nightMode", true);
-// }
-// function disableNightMode() {
-//   body.classList.remove("night-mode");
-//   nav.classList.remove("night-mode");
-//   darkMode.style.color = "black";
-//   cards.forEach((card) => {
-//     card.classList.remove("night-mode");
-//   });
-//   navlinks.forEach((navlink) => {
-//     navlink.classList.remove("night-mode");
-//   });
-//   form.classList.remove("night-mode");
-//   localStorage.setItem("nightMode", false);
-// }
-// darkmode=========================//////////
 
 // eye-icon========================================
 function eyeIcon() {
-  const password = document.getElementById("password");
-  const passIcon = document.getElementById("pass-icon");
+  const password = document.querySelector(".password");
+
   const type =
     password.getAttribute("type") === "password" ? "text" : "password";
   password.setAttribute("type", type);
